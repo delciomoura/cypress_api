@@ -1,0 +1,27 @@
+{
+  "name": "cypress_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "test:headless": "cypress run --spec cypress/e2e/integracao"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delciomoura/cypress_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delciomoura/cypress_api/issues"
+  },
+  "homepage": "https://github.com/delciomoura/cypress_api#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.0",
+    "cypress": "^12.12.0"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1"
+  }
+}
