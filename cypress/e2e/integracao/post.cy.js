@@ -13,7 +13,7 @@ describe('post', () => {
         it('Should return 201 when creating a contact', () => {
             cy.request({
                 method: 'POST',
-                url: 'http://localhost:3000/contacts',
+                url: '/contacts',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': Cypress.env('session'),
@@ -30,7 +30,7 @@ describe('post', () => {
         it('Should return 401 when trying to create a contact without sending the authorization', () => {
             cy.request({
                 method: 'POST',
-                url: 'http://localhost:3000/contacts',
+                url: '/contacts',
                 headers: {
                     'Content-Type': 'application/json',
                 },

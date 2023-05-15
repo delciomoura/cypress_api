@@ -14,7 +14,7 @@ describe('get', () => {
         it('Should return 200 when listing contacts', () => {
             cy.request({
                 method: 'GET',
-                url: 'http://localhost:3000/contacts',
+                url: '/contacts',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': Cypress.env('session'),
@@ -30,7 +30,7 @@ describe('get', () => {
         it('Should return 401 when trying to list contacts without sending the authorization', () => {
             cy.request({
                 method: 'GET',
-                url: 'http://localhost:3000/contacts',
+                url: '/contacts',
                 headers: {
                     'Content-Type': 'application/json',
                 },

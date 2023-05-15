@@ -1,7 +1,7 @@
 Cypress.Commands.add("requestCreateUser", (user) => {
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3000/user',
+        url: '/user',
         headers: {'Content-Type': 'application/json'},
         body: user,
     }).then((response) => {
@@ -12,7 +12,7 @@ Cypress.Commands.add("requestCreateUser", (user) => {
 Cypress.Commands.add("requestSession", (user) => {
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3000/session',
+        url: '/session',
         headers: {'Content-Type': 'application/json'},
         body: user,
     }).then((response) => {
@@ -25,7 +25,7 @@ Cypress.Commands.add("requestSession", (user) => {
 Cypress.Commands.add("requestCreateContact", (contact) => {
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3000/contacts',
+        url: '/contacts',
         headers: {
             'Content-Type': 'application/json',
             'Authorization':  Cypress.env('session')
@@ -41,7 +41,7 @@ Cypress.Commands.add("requestCreateContact", (contact) => {
 Cypress.Commands.add("deleteContact", () => {
     cy.request({
         method: 'DELETE',
-        url: `http://localhost:3000/contacts/${Cypress.env('contactID')}`,
+        url: `/contacts/${Cypress.env('contactID')}`,
         headers: {
             'Content-Type': 'application/json',
             'Authorization':  Cypress.env('session')
